@@ -7,8 +7,9 @@
 }
 
 html {
-  background-color: #0E0E00;
   color: #e1e1e1;
+  background: url('jeju-background.jpg') no-repeat fixed center;
+  background-size: cover;
 }
 
 body {
@@ -24,6 +25,9 @@ body {
   position: fixed;
   height: 100px;
   padding: 0 2rem;
+  z-index: 2;
+  opacity: 0;
+  animation: appear 0.5s forwards 0.5s;
 }
 
 .logo {
@@ -62,12 +66,14 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .vitals li {
   display: inline-block;
   margin: 0 2rem;
+  flex-basis: 33%;
+  text-align: center;
 }
 
 .main {
@@ -75,7 +81,8 @@ body {
   margin: 0 auto;
   padding: 5rem 2.5rem;
   opacity: 0;
-  animation: appear 0.5s forwards 0.25s;
+  animation: appear 0.5s forwards 0.75s;
+  z-index: 1;
 }
 
 .faqs {
@@ -91,8 +98,12 @@ h2 + p, h3 + p {
   margin-top: 1rem;
 }
 
-p + p {
+.primer p + p {
   margin-top: 3rem;
+}
+
+p + p {
+  margin-top: 1rem;
 }
 
 li {
@@ -106,7 +117,8 @@ strong {
 h1,h2,h3 {
   margin: 2.5rem 0 0;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
+  color: #FFB000
 }
 
 h1 {
@@ -153,8 +165,8 @@ a {
   text-transform: uppercase;
   letter-spacing: 3px;
   line-height: 2.5rem;
-  border: 1px solid #FFB000;
-  border-radius: 1px;
+  border: 2px solid #FFB000;
+  border-radius: 3px;
   font-size: .75rem;
   background-color: transparent;
 }
@@ -162,12 +174,12 @@ a {
 @keyframes appear {
   from {
     opacity: 0;
-    transform: scale(0.98);
+    /* transform: scale(0.98); */
   }
 
   to {
     opacity: 1;
-    transform: scale(1);
+    /* transform: scale(1); */
   }
 }
 
@@ -175,10 +187,6 @@ a {
   and (min-device-width: 360px)
   and (max-device-width: 960px)
   and (-webkit-min-device-pixel-ratio: 2) {
-
-  .protspec-logo {
-    margin-top: 1.5rem;
-  }
 
   h1 {
     font-size: 2.5rem;
@@ -190,9 +198,5 @@ a {
 
   .main {
     padding: 1rem;
-  }
-
-  .bulwark-header {
-    margin-bottom: -140px;
   }
 }
