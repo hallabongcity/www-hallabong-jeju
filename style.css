@@ -56,7 +56,6 @@ body {
   margin: 6rem auto 6rem;
 }
 
-
 .headline span {
   display: none;
 }
@@ -171,6 +170,14 @@ a {
   background-color: transparent;
 }
 
+.cta-wrap {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -192,11 +199,46 @@ a {
     font-size: 2.5rem;
   }
 
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .header .cta {
+    display: none;
+  }
+
+  .headline {
+    margin: 0 auto 1rem;
+  }
+
+  .vitals {
+    flex-direction: column;
+  }
+
+  .vitals li {
+    margin: 0;
+  }
+
+  .material-icon {
+    margin: 1.5rem 0 0;
+  }
+
   .primer {
     margin-top: 2rem;
+    font-size: 1.5rem;
   }
 
   .main {
     padding: 1rem;
+  }
+
+  hr {
+    margin: 3rem 0;
+  }
+
+  .cta-wrap {
+    margin-top: 1rem;
   }
 }
