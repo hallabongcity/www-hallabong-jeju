@@ -228,10 +228,13 @@ a {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    height: auto;
+    margin-top: 1rem;
   }
 
   .header .cta {
-    display: none;
+    margin: 1rem 0;
+    text-align: center;
   }
 
   .headline {
