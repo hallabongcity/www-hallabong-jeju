@@ -51,12 +51,12 @@ body {
 .headline {
   display: flex;
   justify-content: center;
-  margin: 6rem auto 6rem;
+  margin: 3rem auto 6rem;
   max-width: 100vw;
 }
 
 .headline img {
-  width: 100%;
+  width: 80%;
 }
 
 .headline span {
@@ -70,11 +70,25 @@ body {
   justify-content: center;
 }
 
-.carousel-photo {
+.carousel-section {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem 2rem;
   width: calc(50% - 2rem);
+}
+
+.carousel-section span {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #FFB000
+}
+
+.carousel-photo {
   height: auto;
   display: inline-block;
-  margin: 1rem;
+  border-radius: 10px;
+  aspect-ratio: 3/2;
 }
 
 .vitals {
@@ -241,6 +255,10 @@ a {
     margin: 0 auto 1rem;
   }
 
+  .headline img {
+    width: 90%;
+  }
+
   .vitals {
     flex-direction: column;
   }
@@ -274,8 +292,16 @@ a {
     margin: 3rem 0;
   }
 
+  .carousel-section {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .carousel-section span {
+    height: 3rem;
+  }
+
   .carousel-photo {
-    width: calc(50%);
     margin: 0;
   }
 }
