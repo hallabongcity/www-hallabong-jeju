@@ -70,25 +70,50 @@ body {
   justify-content: center;
 }
 
+.carousel + .carousel {
+  margin-top: 0;
+}
+
 .carousel-section {
   display: flex;
   flex-direction: column;
-  margin: 1rem 1rem 2rem;
-  width: calc(50% - 2rem);
+  margin: 1rem 0.5rem 2rem;
+  width: calc(50% - 1rem);
+}
+
+.carousel-section.full {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.carousel-section.full > div img {
+  width: calc(50% - 1rem);
+  margin: 1rem 0.5rem 0;
 }
 
 .carousel-section span {
   text-align: center;
   margin-bottom: 1rem;
   font-weight: 600;
-  color: #FFB000
+  color: #FFB000;
+  display: block;
+  width: 100%;
 }
 
 .carousel-photo {
-  height: auto;
+  max-height: 360px;
   display: inline-block;
   border-radius: 10px;
+}
+
+.carousel-photo img {
+  height: auto;
+  display: inline-block;
   aspect-ratio: 3/2;
+}
+
+.carousel-photo + .carousel-photo {
+  float: left;
 }
 
 .vitals {
@@ -293,15 +318,26 @@ a {
   }
 
   .carousel-section {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .carousel-section span {
-    height: 3rem;
+    height: auto;
+  }
+
+
+  .carousel-section.full {
+    margin-bottom: -1rem;
+  }
+  .carousel-section.full > div img {
+    width: 100%;
+    margin-left: 0.05rem;
+    margin-top: 0;
   }
 
   .carousel-photo {
-    margin: 0;
+    width: 100%;
   }
 }
