@@ -63,6 +63,27 @@ body {
   display: none;
 }
 
+.featured {
+  display: flex;
+}
+
+.featured-section {
+  width: 50%;
+  margin-right: 1rem;
+}
+
+.feature-section + .feature-section {
+  margin-left: 1rem;
+}
+
+.featured-section ul {
+  margin: 0;
+}
+
+.featured-section li {
+  margin: 0;
+}
+
 .carousel {
   margin: 3rem -1rem;
   display: flex;
@@ -367,7 +388,9 @@ a {
   .carousel-section.full > div img {
     width: 100%;
     margin-left: 0.05rem;
-    margin-top: 0;
+    margin-top: 1rem;
+    display: inline-block;
+    float: none;
   }
 
   .carousel-photo {
@@ -381,5 +404,14 @@ a {
   .host-logo {
     width: calc(25% - 1rem);
     margin: 0 0.5rem;
+  }
+
+  .featured {
+    display: inherit;
+  }
+
+  .featured-section {
+    width: auto;
+    margin: 0;
   }
 }
